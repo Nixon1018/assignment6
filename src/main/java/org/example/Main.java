@@ -14,7 +14,6 @@
         - An equals method that returns true if the given object is a credit card with the same card number, and false otherwise.
         - A clone method that creates and returns a new credit card with the same name, card number, and expiration date as the original credit card."*/
 package org.example;
-import javax.smartcardio.Card;
 import java.util.logging.Logger;
 import java.util.Scanner;
 class card implements Cloneable{
@@ -33,7 +32,7 @@ class card implements Cloneable{
         return ( this.cardnumber==cardnumber?"true":"false");
 
     }
-    public Object clone() throws CloneNotSupportedException
+    public Object CLONE() throws CloneNotSupportedException
     {
         return super.clone();
     }
@@ -56,7 +55,7 @@ public class Main {
         LOGGER.info("Enter the Expiration date:");
         date=sc.next();
         card c = new card(name,no,date);
-        card x = (card)c.clone();
+        card x = (card)c.CLONE();
         LOGGER.info("Enter the second cardholdername:");
         x.holdername=sc.next();
         LOGGER.info("Enter the second cardnumber:");
