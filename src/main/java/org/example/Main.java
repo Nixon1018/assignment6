@@ -16,12 +16,12 @@
 package org.example;
 import java.util.logging.Logger;
 import java.util.Scanner;
-class card implements Cloneable{
+class Card implements Cloneable{
     String holdername;
     int cardnumber;
     String expirationdate;
 
-    card(String name,int no,String date)
+    Card(String name,int no,String date)
     {
         holdername=name;
         cardnumber=no;
@@ -54,8 +54,8 @@ public class Main {
         no=sc.nextInt();
         LOGGER.info("Enter the Expiration date:");
         date=sc.next();
-        card c = new card(name,no,date);
-        card x = (card)c.clone();
+        Card c = new Card(name,no,date);
+        Card x = (Card)c.clone();
         LOGGER.info("Enter the second cardholdername:");
         x.holdername=sc.next();
         LOGGER.info("Enter the second cardnumber:");
