@@ -41,32 +41,38 @@ class Card implements Cloneable{
 
 
 public class Main {
-    private static final  Logger LOGGER=Logger.getLogger("InfoLogging");
-    public static void main(String[] args) throws CloneNotSupportedException{
+    private static final Logger LOGGER = Logger.getLogger("InfoLogging");
+
+    public static void main(String[] args) throws CloneNotSupportedException {
         String name;
         int no;
         String date;
         String res;
-        Scanner sc= new Scanner(System.in);
-        LOGGER.info("Enter the first cardholdername:");
-        name=sc.next();
-        LOGGER.info("Enter the first cardnumber:");
-        no=sc.nextInt();
-        LOGGER.info("Enter the Expiration date:");
-        date=sc.next();
-        Card c = new Card(name,no,date);
-        Card x = (Card)c.clone();
-        LOGGER.info("Enter the second cardholdername:");
-        x.holdername=sc.next();
-        LOGGER.info("Enter the second cardnumber:");
-        x.cardnumber=sc.nextInt();
-        LOGGER.info("Enter the Expiration date:");
-        x.expirationdate=sc.next();
-        res= c.check(x.cardnumber);
-        String s="Result: "+res;
-        LOGGER.info(s);
-
-
+        Scanner sc = new Scanner(System.in);
+        try {
+            LOGGER.info("Enter the first cardholdername:");
+            name = sc.next();
+            LOGGER.info("Enter the first cardnumber:");
+            no = sc.nextInt();
+            LOGGER.info("Enter the Expiration date:");
+            date = sc.next();
+            Card c = new Card(name, no, date);
+            Card x = (Card) c.clone();
+            LOGGER.info("Enter the second cardholdername:");
+            x.holdername = sc.next();
+            LOGGER.info("Enter the second cardnumber:");
+            x.cardnumber = sc.nextInt();
+            LOGGER.info("Enter the Expiration date:");
+            x.expirationdate = sc.next();
+            res = c.check(x.cardnumber);
+            String s = "Result: " + res;
+            LOGGER.info(s);
+        }catch (Exception e)
+        {
+            String ec = ""+e;
+            LOGGER.info(ec);
+            sc.nextLine();
+        }
 
     }
 }
