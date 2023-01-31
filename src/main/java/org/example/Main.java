@@ -49,7 +49,6 @@ public class Main {
         String date;
         String res;
         Scanner sc = new Scanner(System.in);
-        try {
             LOGGER.info("Enter the first cardholdername:");
             name = sc.next();
             LOGGER.info("Enter the first cardnumber:");
@@ -67,12 +66,5 @@ public class Main {
             res = c.check(x.cardnumber);
             String s = "Result: " + res;
             LOGGER.info(s);
-        }catch (Exception e)
-        {
-            String ec = ""+e;
-            LOGGER.info(ec);
-            sc.nextLine();
         }
-
-    }
 }
