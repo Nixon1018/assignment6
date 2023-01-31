@@ -44,7 +44,7 @@ class Card implements Cloneable{
 public class Main {
     private static final Logger LOGGER = Logger.getLogger("InfoLogging");
 
-    public static void main(String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args)  {
         String name;
         int no;
         String date;
