@@ -16,7 +16,7 @@
 package org.example;
 import java.util.logging.Logger;
 import java.util.Scanner;
-class Card implements Cloneable{
+class Card {
     String holdername;
     int cardnumber;
     String expirationdate;
