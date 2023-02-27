@@ -1,6 +1,6 @@
 package org.example;
 
-class Card implements Cloneable{
+public class Card implements Cloneable{
     String holdername;
     int cardnumber;
     String expirationdate;
